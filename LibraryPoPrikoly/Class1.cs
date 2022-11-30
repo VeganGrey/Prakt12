@@ -19,21 +19,23 @@ namespace LibraryPoPrikoly
             Plosh = Math.Sqrt(p * (p - stA) * (p - stB) * (p - stC));
         }
 
-        public void ChisloSum(int chis,out int summ)
+        public int ChisloSum(int chis)
         {
             int a, b, c;
             a = chis / 100;
             b = (chis / 10) % 10;
-            c = chis % 100;
-            summ = a + b + c;
+            c = chis % 10;
+            int summ = a + b + c;
+            return summ;
         }
-        public void ChisloProizv(int chis, out int proizv)
+        public int ChisloProizv(int chis)
         {
             int a, b, c;
             a = chis / 100;
             b = (chis / 10) % 10;
-            c = chis % 100;
-            proizv = a * b * c;
+            c = chis % 10;
+            int proizv = a * b * c;
+            return proizv;
         }
     }
 }
