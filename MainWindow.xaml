@@ -1,0 +1,156 @@
+﻿<Window x:Class="Prakt12.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prakt12"
+        mc:Ignorable="d"
+        Title="Практическая 13" FontFamily="Cascadia Code" Height="322" Width="480" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Blend.png" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="85*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+
+
+
+        <Menu VerticalAlignment="Center" Grid.Row="1" Height="19">
+            <MenuItem Header="Файл" FontFamily="Cascadia Code">
+                <MenuItem Header="Расчёт треугольника" FontFamily="Cascadia Code"></MenuItem>
+                <MenuItem Header="Расчёт числа" FontFamily="Cascadia Code"></MenuItem>
+                <MenuItem Header="Очистка" FontFamily="Cascadia Code"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="О программе" FontFamily="Cascadia Code"></MenuItem>
+            <MenuItem Header="Тех.Поддержка" FontFamily="Cascadia Code"></MenuItem>
+            <MenuItem Header="Выход" FontFamily="Cascadia Code" Height="16"></MenuItem>
+        </Menu>
+
+
+
+        <TabControl Margin="0,19,0,0" Grid.Row="1" Grid.RowSpan="2">
+            <TabItem Header="Треугольник">
+                <Grid Background="White">
+                    <GroupBox Header="Исходные данные" Margin="0,0,0,71">
+                        <Grid>
+                            <TextBox x:Name="X1" Margin="10,19,0,0" HorizontalAlignment="Left" Width="104" Height="28" VerticalAlignment="Top"></TextBox>
+                            <TextBox x:Name="Y1" Margin="10,79,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104"/>
+                            <TextBox x:Name="X2" Margin="0,78,0,0" HorizontalAlignment="Center" Width="118" Height="28" VerticalAlignment="Top"/>
+                            <TextBox x:Name="Y2" Margin="0,19,0,0" HorizontalAlignment="Center" Width="118" Height="28" VerticalAlignment="Top"/>
+                            <TextBox x:Name="X3" Margin="0,78,10,0" HorizontalAlignment="Right" Width="119" Height="28" VerticalAlignment="Top"/>
+                            <TextBox x:Name="Y3" Margin="0,19,10,0" Height="28" VerticalAlignment="Top" HorizontalAlignment="Right" Width="119"/>
+                            <Label Content="X1" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="19" Width="21" FontSize="8" FontFamily="Cascadia Code"/>
+                            <Label Content="Y1" HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top" Height="19" Width="21" FontSize="8" FontFamily="Cascadia Code"/>
+                            <Label Content="X2" HorizontalAlignment="Left" Margin="178,0,0,0" VerticalAlignment="Top" Height="19" Width="21" FontSize="8" FontFamily="Cascadia Code"/>
+                            <Label Content="Y2" HorizontalAlignment="Left" Margin="180,62,0,0" VerticalAlignment="Top" Height="19" Width="21" FontSize="8" FontFamily="Cascadia Code"/>
+                            <Label Content="X3" HorizontalAlignment="Left" Margin="332,0,0,0" VerticalAlignment="Top" Height="19" Width="21" FontSize="8" FontFamily="Cascadia Code"/>
+                            <Label Content="Y3" HorizontalAlignment="Left" Margin="333,62,0,0" VerticalAlignment="Top" Height="19" Width="20" FontSize="8" FontFamily="Cascadia Code"/>
+                        </Grid>
+                    </GroupBox>
+                    <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,159,0,0">
+                        <Grid>
+                            <TextBox x:Name="Perim" HorizontalAlignment="Left" Margin="19,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="25" IsReadOnly="True" ToolTip="Периметр треугольника">
+                                <TextBox.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Копировать"/>
+                                        <MenuItem Header="Вставить"/>
+                                        <MenuItem Header="Вырезать"/>
+                                        <MenuItem Header="Удалить"/>
+                                        <MenuItem Header="Рассчитать"/>
+                                        <MenuItem Header="Очистка"/>
+                                    </ContextMenu>
+                                </TextBox.ContextMenu>
+                            </TextBox>
+                            <Button Content="Расчёт" HorizontalAlignment="Left" Margin="372,11,0,0" VerticalAlignment="Top" Width="72" Height="27" FontFamily="Cascadia Code" FontSize="10" BorderBrush="#FFD2D2D2" IsDefault="True" ToolTip="Рассчитать площадь и периметр"/>
+                            <TextBox x:Name="Plosh" HorizontalAlignment="Center" Margin="0,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="25" IsReadOnly="True" ToolTip="Площадь треугольника">
+                                <TextBox.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Копировать"/>
+                                        <MenuItem Header="Вставить"/>
+                                        <MenuItem Header="Вырезать"/>
+                                        <MenuItem Header="Удалить"/>
+                                        <MenuItem Header="Рассчитать"/>
+                                        <MenuItem Header="Очистка"/>
+                                    </ContextMenu>
+                                </TextBox.ContextMenu>
+                            </TextBox>
+
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+
+
+
+            <TabItem Header="Число">
+                <Grid>
+                    <GroupBox Header="Исходнные данные" Margin="0,0,0,117">
+                        <Grid>
+                            <TextBox x:Name="Chislo" HorizontalAlignment="Left" Margin="70,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="132" Height="34">
+                                <TextBox.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Копировать"/>
+                                        <MenuItem Header="Вставить"/>
+                                        <MenuItem Header="Вырезать"/>
+                                        <MenuItem Header="Удалить"/>
+                                        <MenuItem Header="Случайное число"></MenuItem>
+                                    </ContextMenu>
+                                </TextBox.ContextMenu>
+                            </TextBox>
+                            <Label HorizontalAlignment="Left" Margin="217,0,0,0" VerticalAlignment="Center" Content="- Трехзначное число"/>
+                        </Grid>
+                    </GroupBox>
+                    <GroupBox Header="Итоговые данные" Margin="0,122,0,0">
+                        <Grid>
+                            <TextBox x:Name="Summa" HorizontalAlignment="Left" Margin="45,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="26" ToolTip="Сумма цифр числа">
+                                <TextBox.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Копировать"/>
+                                        <MenuItem Header="Вставить"/>
+                                        <MenuItem Header="Вырезать"/>
+                                        <MenuItem Header="Удалить"/>
+                                        <MenuItem Header="Рассчитать"/>
+                                        <MenuItem Header="Очистка"/>
+                                    </ContextMenu>
+                                </TextBox.ContextMenu>
+                            </TextBox>
+                            <TextBox x:Name="Proizv" HorizontalAlignment="Left" Margin="301,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="26" ToolTip="Произведение цифр числа">
+                                <TextBox.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="Копировать"/>
+                                        <MenuItem Header="Вставить"/>
+                                        <MenuItem Header="Вырезать"/>
+                                        <MenuItem Header="Удалить"/>
+                                        <MenuItem Header="Рассчитать"/>
+                                        <MenuItem Header="Очистка"/>
+                                    </ContextMenu>
+                                </TextBox.ContextMenu>
+                            </TextBox>
+                            <Button Content="Расчёт" HorizontalAlignment="Left" Margin="214,50,0,0" VerticalAlignment="Top" IsDefault="True"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+
+        <StatusBar VerticalAlignment="Center" Grid.Row="3" Height="20">
+            <TextBlock Text="Задание 13"></TextBlock>
+            <Separator></Separator>
+            <TextBlock x:Name="data" Text="00.00.0000"></TextBlock>
+            <Separator></Separator>
+            <TextBlock x:Name="time" Text="00:00:00"></TextBlock>
+        </StatusBar>
+        <FrameworkElement.ContextMenu>
+            <ContextMenu>
+                <MenuItem Header="Копировать"/>
+                <MenuItem Header="Вставить"/>
+                <MenuItem Header="Вырезать"/>
+                <MenuItem Header="Удалить"/>
+            </ContextMenu>
+        </FrameworkElement.ContextMenu>
+    </Grid>
+</Window>

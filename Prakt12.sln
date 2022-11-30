@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32602.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prakt12", "Prakt12.csproj", "{48D607C8-DF58-43CC-84EC-A476D967754B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryPoPrikoly", "LibraryPoPrikoly\LibraryPoPrikoly.csproj", "{29F6BDB7-8D33-4B98-998C-BC5BF369C86D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48D607C8-DF58-43CC-84EC-A476D967754B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48D607C8-DF58-43CC-84EC-A476D967754B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48D607C8-DF58-43CC-84EC-A476D967754B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48D607C8-DF58-43CC-84EC-A476D967754B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29F6BDB7-8D33-4B98-998C-BC5BF369C86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29F6BDB7-8D33-4B98-998C-BC5BF369C86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29F6BDB7-8D33-4B98-998C-BC5BF369C86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29F6BDB7-8D33-4B98-998C-BC5BF369C86D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE9CFF8A-D105-45F5-A2F1-C35CD3444AD5}
+	EndGlobalSection
+EndGlobal
