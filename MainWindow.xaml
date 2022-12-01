@@ -5,18 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Prakt12"
         mc:Ignorable="d"
-        Title="Практическая 13" FontFamily="Cascadia Code" Height="322" Width="480" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Blend.png" Loaded="Window_Loaded">
+        Title="Практическая 12" FontFamily="Cascadia Code" Height="300" Width="480" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen" Icon="/Blend.png" Loaded="Window_Loaded" Background="#FF0D3B66">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="8*"/>
-            <RowDefinition Height="85*"/>
-            <RowDefinition Height="9*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="179*"/>
+            <RowDefinition Height="67*"/>
+            <RowDefinition Height="20*"/>
         </Grid.RowDefinitions>
 
 
 
-        <Menu VerticalAlignment="Center" Grid.Row="1" Height="19">
+        <Menu VerticalAlignment="Center" Grid.Row="1" Height="19" Background="#FFF4D35E">
             <MenuItem Header="Файл" FontFamily="Cascadia Code">
                 <MenuItem Header="Расчёт треугольника" FontFamily="Cascadia Code" Click="Treugol_Click"></MenuItem>
                 <MenuItem Header="Расчёт числа" FontFamily="Cascadia Code" Click="Chisl"></MenuItem>
@@ -29,10 +30,10 @@
 
 
 
-        <TabControl Margin="0,19,0,0" Grid.Row="1" Grid.RowSpan="2">
-            <TabItem Header="Треугольник">
-                <Grid Background="White">
-                    <GroupBox Header="Исходные данные" Margin="0,0,0,71">
+        <TabControl Margin="0,1,0,0" Grid.Row="2" Grid.RowSpan="2" Background="#FFF95738">
+            <TabItem Header="Треугольник" Background="#FFFAF0CA">
+                <Grid Background="#FFFAF0CA">
+                    <GroupBox Header="Исходные данные" Height="149" VerticalAlignment="Top" BorderBrush="#FF0D3B66">
                         <Grid>
                             <TextBox x:Name="X1" Margin="10,19,0,0" HorizontalAlignment="Left" Width="104" Height="28" VerticalAlignment="Top" TextChanged="Text_Changed"></TextBox>
                             <TextBox x:Name="Y1" Margin="10,79,0,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Left" Width="104" TextChanged="Text_Changed"/>
@@ -48,7 +49,7 @@
                             <Label Content="Y3" HorizontalAlignment="Left" Margin="333,62,0,0" VerticalAlignment="Top" Height="19" Width="20" FontSize="8" FontFamily="Cascadia Code"/>
                         </Grid>
                     </GroupBox>
-                    <Border BorderBrush="LightGray" BorderThickness="2" Margin="0,159,0,0">
+                    <Border BorderBrush="#FF0D3B66" BorderThickness="1.4" Margin="0,154,0,0" Grid.Row="3">
                         <Grid>
                             <TextBox x:Name="Perim" HorizontalAlignment="Left" Margin="19,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="25" IsReadOnly="True" ToolTip="Периметр треугольника">
                                 <!--<TextBox.ContextMenu>
@@ -62,7 +63,7 @@
                                     </ContextMenu>
                                 </TextBox.ContextMenu>-->
                             </TextBox>
-                            <Button Content="Расчёт" HorizontalAlignment="Left" Margin="372,11,0,0" VerticalAlignment="Top" Width="72" Height="27" FontFamily="Cascadia Code" FontSize="10" BorderBrush="#FFD2D2D2" IsDefault="True" ToolTip="Рассчитать площадь и периметр" Click="Treugol_Click"/>
+                            <Button Content="Расчёт" HorizontalAlignment="Left" Margin="372,11,0,0" VerticalAlignment="Top" Width="72" Height="27" FontFamily="Cascadia Code" FontSize="10" BorderBrush="#FFD2D2D2" IsDefault="True" ToolTip="Рассчитать площадь и периметр" Click="Treugol_Click" Background="#FFF95738"/>
                             <TextBox x:Name="Plosh" HorizontalAlignment="Center" Margin="0,13,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="116" Height="25" IsReadOnly="True" ToolTip="Площадь треугольника">
                                 <TextBox.ContextMenu>
                                     <ContextMenu>
@@ -84,9 +85,9 @@
 
 
 
-            <TabItem Header="Число">
-                <Grid>
-                    <GroupBox Header="Исходнные данные" Margin="0,0,0,117">
+            <TabItem Header="Число" Background="#FFFAF0CA">
+                <Grid Background="#FFFAF0CA">
+                    <GroupBox Header="Исходнные данные" Height="122" VerticalAlignment="Top" BorderBrush="#FF0D3B66" BorderThickness="1.5">
                         <Grid>
                             <TextBox x:Name="Chislo" HorizontalAlignment="Left" Margin="70,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="132" Height="34" TextChanged="Datachanged_Click">
                                 <!--<TextBox.ContextMenu>
@@ -102,7 +103,7 @@
                             <Label HorizontalAlignment="Left" Margin="217,0,0,0" VerticalAlignment="Center" Content="- Трехзначное число"/>
                         </Grid>
                     </GroupBox>
-                    <GroupBox Header="Итоговые данные" Margin="0,122,0,0">
+                    <GroupBox Header="Итоговые данные" Margin="0,122,0,0" BorderBrush="#FF0D3B66" BorderThickness="1.5">
                         <Grid>
                             <TextBox x:Name="Summa" HorizontalAlignment="Left" Margin="45,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="120" Height="26" ToolTip="Сумма цифр числа" IsReadOnly="True">
                                 <!--<TextBox.ContextMenu>
@@ -137,7 +138,7 @@
 
 
 
-        <StatusBar VerticalAlignment="Center" Grid.Row="3" Height="20">
+        <StatusBar VerticalAlignment="Center" Grid.Row="4" Height="20" Background="#FFEE964B">
             <TextBlock Text="Задание 13"></TextBlock>
             <Separator></Separator>
             <TextBlock x:Name="data" Text="00.00.0000"></TextBlock>
